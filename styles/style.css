@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+    padding-top: 200px;
+    background-color: silver;
+}
 .tabello {
   display: grid;
   grid-template-columns: repeat(10, 50px);
@@ -15,7 +19,7 @@
   width: 50px;
   height: 50px;
   border: 1px solid black;
-  background-color: palegoldenrod;
+  background-color: rgb(224, 213, 0);
 }
 .color-red {
   background-color: red;

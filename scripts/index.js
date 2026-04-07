@@ -9,11 +9,16 @@ for (let i = 0; i < 100; i++) {
 
 const randomNumero = [];
 
-for (let j = 0; j < 16; j++) {
-    randomNumero.push(Math.floor(Math.random() * 100) + 1);
+
+while (randomNumero.length < 16) {
+    let num = Math.floor(Math.random() * 100) + 1;
+
+    if (!randomNumero.includes(num)) {
+        randomNumero.push(num);
+    }
 }
 console.log(randomNumero);
-let count = 0;
+let count = 1;
 const cells = document.querySelectorAll('.button-table');
 cells.forEach((cell) => {
     cell.addEventListener('click', () => {
@@ -39,6 +44,10 @@ cells.forEach((cell) => {
             }
 
         }
+        const score = document.querySelector('#score');
+        score.innerHTML = `SCORE: ${count}`;
+
         console.log(`Hai cliccato sulla cella ${cellValue}`);
     });
-}); 
+});
+
